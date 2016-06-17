@@ -1,0 +1,21 @@
+{
+  "name": "app",
+  "description": "site",
+  "main": "bower",
+  "authors": [
+    "Yudin Vyatcheslav <monsterfoma@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "index",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "resources/assets/js",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0"
+  }
+}
