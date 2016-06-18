@@ -15,14 +15,18 @@ elixir(function(mix) {
     mix
         .less([
                 'style.less'
-            ], 'public/css/all.css')
+            ],
+        'public/css/all.css')
             
         .scripts([
-                'jquery/dist/jquery.min.js'
-            ], 'public/js/all.js')
+                'libs/jquery/dist/jquery.min.js',
+                'custom/script.js'
+            ],
+        'public/js/all.js')
             
         .version([
                 'css/all.css',
                 'js/all.js'
-            ]);
+            ]
+        );
 })

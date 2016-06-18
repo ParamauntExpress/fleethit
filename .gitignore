@@ -2,9 +2,12 @@
 /node_modules
 /public/storage
 /semantic
-/resources/assets/js
-
-Homestead.yaml
-Homestead.json
+semantic.json
+/resources/assets/js/libs
+/public/build
+/public/css
+/public/js
+artisan
+composer.lock
 .env
 

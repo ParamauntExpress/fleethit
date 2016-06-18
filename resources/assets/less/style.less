@@ -1,5 +1,5 @@
 body, html {
-    background: gray;
+    background: white;
 }
 
 .following.bar {
@@ -9,20 +9,31 @@ body, html {
     z-index: 900;
     padding: 2em 0;
     width: 100%;
-    
+    background-color: rgba(211, 217, 219, 0.5);
 }
+
+.ui.secondary.inverted.menu, .ui.secondary.inverted.pointing.menu {
+    border-color: transparent;
+    border-bottom: 0;
+}
+
 
 .masthead .container {
     min-height: 600px;
     text-align: center;
     padding: 15rem 0;
     
+    &:after {
+        
+    }
+    
     .introduction {
         position: relative;
         clear: both;
         
         h1 {
-            line-height: 1.2;
+            font-size: 1.5rem;
+            line-height: 2;
             
             .library {
                 display: block;
@@ -35,5 +46,5 @@ body, html {
 }
 
 .bg-banner {
-    background-image: url('/img/1.jpg');
+    background-image: url('/img/14.jpg');
 }
