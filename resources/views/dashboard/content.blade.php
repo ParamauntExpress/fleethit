@@ -28,8 +28,14 @@
                             </tr>
                         @endforeach
                     </tboby>
+                    <tfoot>
+                        <tr><th colspan="5">
+                            <div class="ui right floated pagination menu">
+                                {!! (new Landish\Pagination\SemanticUI($drivers))->render() !!}
+                            </div>
+                        </th></tr>
+                    </tfoot>
                 </table>
-                {{ $drivers->render() }}
             </div>
             <div class="ui bottom attached tab segment" data-tab="users">
                 <h3>Users</h3>
