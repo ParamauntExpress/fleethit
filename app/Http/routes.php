@@ -12,5 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('/rent', function() {
+    return view('rent');
+});
+
+Route::controller('sign', 'SignController');
+Route::controller('dashboard', 'DashboardController');
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

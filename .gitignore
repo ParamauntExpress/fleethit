@@ -4,6 +4,7 @@
 /semantic
 semantic.json
 /resources/assets/js/libs
+/storage/passport
 /public/build
 /public/css
 /public/js
