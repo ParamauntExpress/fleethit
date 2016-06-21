@@ -1,11 +1,11 @@
 <div class="card">
     <div class="content">
         <div class="meta">
-            2015 Toyota Camry
+            2010 Toyota Prius
         </div>
     </div>
     <div class="image img-shadow">
-        <img class="ui wireframe image" src="img/tc15.jpg">
+        <img class="ui wireframe image" src="img/tp.png">
     </div>
     <div class="content">
         <span class="left floated">Rent</span>

@@ -21,6 +21,7 @@ Route::get('/rent', function() {
 
 Route::controller('sign', 'SignController');
 Route::controller('dashboard', 'DashboardController');
+Route::controller('user', 'UserController');
 
 Route::auth();
 

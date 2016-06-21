@@ -8,20 +8,24 @@
         $('.dashboard .tabular.menu .item').tab();
         
         $('.bg.banner .introduction').transition({
-                animation: 'fade left',
-                duration: '2s',
-                onComplete: function() {
-                    //
-                }
-            });
+            animation: 'fade left',
+            duration: '2s',
+            onComplete: function() {
+                //
+            }
+        });
         
         $('.bg.pattern .introduction').transition({
-                animation: 'fade left',
-                duration: '2s',
-                onComplete: function() {
-                    //
-                }
-            });
+            animation: 'fade left',
+            duration: '2s',
+            onComplete: function() {
+                //
+            }
+        });
+        
+        $('.message .close').on('click', function() {
+            $(this).closest('.message').transition('fade');
+        });
         
         $('.regform form').form({
             on: 'blur',
@@ -75,20 +79,20 @@
         });
         
         $('.ui .checkbox').checkbox();
+        
+        $('.ui.dropdown').dropdown();
     });
     
     //custom functions
     $(document).ready(function() {
-        $('input:text, .ui.button', '.ui.action.input')
-        	.on('click', function(e) {
-            	$('input:file', $(e.target).parents()).click();
-        	});
+        $('input:text, .ui.button', '.ui.action.input').on('click', function(e) {
+        	$('input:file', $(e.target).parents()).click();
+    	});
         
-        $('input:file', '.ui.action.input')
-        	.on('change', function(e) {
-            	var name = e.target.files[0].name;
-            	$('input:text', $(e.target).parent()).val(name);
-        	});
+        $('input:file', '.ui.action.input').on('change', function(e) {
+        	var name = e.target.files[0].name;
+        	$('input:text', $(e.target).parent()).val(name);
+    	});
     });
     
 })('jQuery');
