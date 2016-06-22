@@ -2,7 +2,7 @@
     <div class="ui container">
         <h1 class="ui header centered">Register form</h1>
         <div class="ui segment">
-            <form class="ui form" method="POST" action="/sign/register" accept-charset="UTF-8" enctype="multipart/form-data">
+            <form class="ui form" method="POST" action="/sign/rent" accept-charset="UTF-8" enctype="multipart/form-data">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                 <div class="field">
                     <label>First Name</label>

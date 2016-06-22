@@ -24,15 +24,15 @@ class DashboardController extends Controller
         //if (Gate::allows('admin') || Gate::allows('manager')) {
             $drivers = DB::table('drivers')->paginate(10);
             
-            return view('dashboard', ['template' => 'drivers', 'drivers' => $drivers, 'info' => $info]);
+            return view('dashboard', ['template' => 'drivers', 'drivers' => $drivers]);
         //}
     }
     
-    public function getUsers($info = null) {
+    public function getUsers(Request $request) {
         //if (Gate::allows('admin') || Gate::allows('manager')) {
             $users = DB::table('users')->paginate(10);
             
-            return view('dashboard', ['template' => 'users', 'users' => $users, 'info' => $info]);
+            return view('dashboard', ['template' => 'users', 'users' => $users])->with(['info' => ($request) ? $request->info : $request]);
         //}
     }
     

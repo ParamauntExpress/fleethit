@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use App\Http\Controllers\DashboardController;
+use Illuminate\Support\Facades\DB;
+
 use App\User;
 
 class UserController extends Controller
@@ -22,10 +23,11 @@ class UserController extends Controller
         
         $user->update(['role' => $request->role]);
         
-        $info = new \stdClass();
-        $info->header = 'User ' . $user->name;
-        $info->message = 'Success updated!';
+        $info = ['header' => 'User ' . $user->name, 'message' => 'Success updated!'];
         
-        return (new DashboardController)->getUsers($info);
+        $users = DB::table('users')->paginate(10);
+        
+        return \Redirect::route('users', ['info' => $info]);
+        //view('dashboard', ['template' => 'users', 'users' => $users])
     }
 }

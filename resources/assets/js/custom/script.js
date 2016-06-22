@@ -81,6 +81,10 @@
         $('.ui .checkbox').checkbox();
         
         $('.ui.dropdown').dropdown();
+        
+        $('.ui.embed').embed();
+        
+        $('.ui.accordion').accordion();
     });
     
     //custom functions

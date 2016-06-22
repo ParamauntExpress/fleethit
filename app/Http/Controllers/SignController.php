@@ -11,7 +11,7 @@ use App\Driver;
 
 class SignController extends Controller
 {
-    public function postRegister(Request $request) {
+    public function postRent(Request $request) {
         $validator = Validator::make(
             $request->all(),
             [

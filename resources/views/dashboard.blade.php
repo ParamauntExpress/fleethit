@@ -11,7 +11,7 @@
             <h1 class="ui header centered">Dashboard</h1>
             
             @if(Auth::user()->role == 'admin' || Auth::user()->role == 'manager')
-                @include('dashboard.' . $template, ['info' => $info])
+                @include('dashboard.' . $template)
             @elseif(Auth::user()->role == 'driver')
                 <h2>{{ ucfirst(Auth::user()->role) }}</h2>
             @endif

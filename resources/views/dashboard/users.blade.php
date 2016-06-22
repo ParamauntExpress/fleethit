@@ -33,8 +33,8 @@
     @if(!empty($info))
         <div class="ui success message">
             <i class="close icon"></i>
-            <div class="header">{{ $info->header }}</div>
-            <p>{{ $info->message }}</p>
+            <div class="header">{{ $info['header'] }}</div>
+            <p>{{ $info['message'] }}</p>
         </div>
     @endif
 </div>
