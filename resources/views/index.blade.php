@@ -17,4 +17,6 @@
     @include('index.join')
     @include('main.footer')
     @include('main.copyright')
+    
+    @include('register.modal')
 @endsection

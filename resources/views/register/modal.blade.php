@@ -1,5 +1,5 @@
-<div class="ui vertical stripe intro segment basicbg regform">
-    <div class="ui container">
+<div class="ui basic modal regform">
+    <div class="ui segment">
         <h1 class="ui header centered">Register form</h1>
         <div class="ui segment">
             <form class="ui form" method="POST" action="/sign/rent" accept-charset="UTF-8" enctype="multipart/form-data">
@@ -52,7 +52,7 @@
                         </div>
                     </div>
                     <div class="ui segment">
-                        <ul class="ui list">
+                        <ul class="ui list text black">
                             <li>Remains private - never shared</li>
                             <li>No credit check - credit won't be affected</li>
                             <li>Information is safe & secure</li>
@@ -65,7 +65,8 @@
                         </div>
                     </div>
                 </div>
-                <button class="ui button" type="submit">Submit</button>
+                <button class="ui green button" type="submit">Submit</button>
+                <button class="ui gray button" type="button">Close</button>
                 <div class="ui error message"></div>
             </form>
         </div>

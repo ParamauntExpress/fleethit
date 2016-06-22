@@ -8,7 +8,7 @@
                 <span class="tagline">Looking to rent an affordable Uber, Lyft, Via, or Gett ready vehicle?</span>
             </h1>
             <div class="ui divider"></div>
-            <a href="/rent" class="ui huge inverted basic button">Rent a car</a>
+            <a class="ui huge inverted basic button rent-modal">Rent a car</a>
         </div>
     </div>
 </div>

@@ -6,7 +6,7 @@
                 <span class="tagline">Join now and simplify your rental process today!</span>
             </h1>
             <div class="ui hidden divider"></div>
-            <a href="/rent" class="ui huge inverted basic button">Rent a car</a>
+            <a class="ui huge inverted basic button rent-modal">Rent a car</a>
         </div>
     </div>
 </div>

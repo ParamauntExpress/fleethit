@@ -27,15 +27,24 @@
             $(this).closest('.message').transition('fade');
         });
         
+        $('.masthead .button.rent-modal').on('click', function() {
+            $('.ui.modal.regform').modal('show');
+        });
+        
+        $('.ui.modal.regform .ui.gray.button').on('click', function() {
+            $('.ui.modal.regform').modal('hide');
+        });
+        
         $('.regform form').form({
             on: 'blur',
+            inline: true,
             fields: {
                 first: {
                     identifier: 'first',
                     rules: [
                         {
                             type: 'empty',
-                            prompt: 'Please enter a value'
+                            prompt: 'Please enter a First name'
                         }
                     ]
                 },
@@ -44,7 +53,43 @@
                     rules: [
                         {
                             type: 'empty',
-                            prompt: 'Please enter a value'
+                            prompt: 'Please enter a Last name'
+                        }
+                    ]
+                },
+                age: {
+                    identifier: 'age',
+                    rules: [
+                        {
+                            type   : 'empty',
+                            prompt : 'Please check the Age'
+                        }
+                    ]
+                },
+                phone: {
+                    identifier: 'phone',
+                    rules: [
+                        {
+                            type: 'empty',
+                            prompt: 'Please enter a Phone number'
+                        }
+                    ]
+                },
+                address: {
+                    identifier: 'address',
+                    rules: [
+                        {
+                            type: 'empty',
+                            prompt: 'Please enter a Home address'
+                        }
+                    ]
+                },
+                zip: {
+                    identifier: 'zip',
+                    rules: [
+                        {
+                            type: 'empty',
+                            prompt: 'Please enter a Zip-code'
                         }
                     ]
                 },
@@ -53,7 +98,25 @@
                     rules: [
                         {
                             type: 'empty',
-                            prompt: 'Please enter a value'
+                            prompt: 'Please enter a Driver license number'
+                        }
+                    ]
+                },
+                social: {
+                    identifier: 'social',
+                    rules: [
+                        {
+                            type: 'empty',
+                            prompt: 'Please enter a Social security number"'
+                        }
+                    ]
+                },
+                bank: {
+                    identifier: 'bank',
+                    rules: [
+                        {
+                            type: 'creditCard',
+                            prompt: 'Please enter a Bank account number'
                         }
                     ]
                 },
@@ -62,7 +125,7 @@
                     rules: [
                         {
                             type: 'empty',
-                            prompt: 'Please enter a value'
+                            prompt: 'Please upload a Driver license photo'
                         }
                     ]
                 },
@@ -71,7 +134,7 @@
                     rules: [
                         {
                             type   : 'checked',
-                            prompt : 'Please check the checkbox'
+                            prompt : 'Please accept Terms and Conditions'
                         }
                     ]
                 }

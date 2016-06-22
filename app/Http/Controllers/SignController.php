@@ -17,14 +17,21 @@ class SignController extends Controller
             [
                 'first' => 'required|string',
                 'last' => 'required|string',
+                'age' => 'required',
+                'phone' => 'required',
+                'address' => 'required',
+                'zip' => 'required',
                 'license' => 'required|numeric|unique:drivers',
+                'social' => 'required',
+                'bank' => 'required',
                 'image' => 'required|unique:drivers'
             ]
         );
         
         if ($validator->fails() || !Input::hasFile('image')) {
-            dd($validator);
-            return 'Fail';
+            //dd($validator->messages()->all());
+            
+            return view('response', ['messages' => $validator->messages()->all()]);
         }
         
         $md5file = md5_file(Input::file('image')) . '.' . Input::file('image')->getClientOriginalExtension();
@@ -34,11 +41,17 @@ class SignController extends Controller
         $driver = Driver::create([
             'first' => $request->first,
             'last' => $request->last,
+            'age' => $request->age,
+            'phone' => $request->phone,
+            'address' => $request->address,
+            'zip' => $request->zip,
             'license' => $request->license,
+            'social' => $request->social,
+            'bank' => $request->bank,
             'image' => $md5file
         ]);
         
-        return 'Success';
+        return view('response');
     }
     
     public function getPdf($id) {
