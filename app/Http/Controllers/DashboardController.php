@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 use App\Http\Requests;
-
-use Illuminate\Support\Facades\DB;
+use App\Car;
+use App\Driver;
+use App\User;
 
 use Gate;
 
@@ -14,26 +16,48 @@ class DashboardController extends Controller
 {
     public function getIndex() {
         if (\Auth::check()) {
-            return redirect()->intended('/dashboard/drivers');
+            return redirect()->intended('/dashboard/cars');
         } else {
             return redirect()->intended('/');
         }
     }
     
-    public function getDrivers($info = null) {
-        //if (Gate::allows('admin') || Gate::allows('manager')) {
-            $drivers = DB::table('drivers')->paginate(10);
+    public function getCars(Request $request) {
+        if (\Auth::check()) {
+            $cars = Car::paginate(10);
             
+            return view('dashboard', ['template' => 'cars', 'cars' => $cars])->with(['info' => ($request) ? $request->info : null]);
+        } else {
+            return redirect()->intended('/');
+        }
+    }
+    
+    public function getDrivers() {
+        if (\Auth::check()) {
+            $drivers = Driver::paginate(10);
+        
             return view('dashboard', ['template' => 'drivers', 'drivers' => $drivers]);
-        //}
+        } else {
+            return redirect()->intended('/');
+        }
     }
     
     public function getUsers(Request $request) {
-        //if (Gate::allows('admin') || Gate::allows('manager')) {
-            $users = DB::table('users')->paginate(10);
+        if (\Auth::check()) {
+            $users = User::paginate(10);
             
             return view('dashboard', ['template' => 'users', 'users' => $users])->with(['info' => ($request) ? $request->info : $request]);
-        //}
+        } else {
+            return redirect()->intended('/');
+        }
+    }
+    
+    public function getKek() {
+        $user = \Auth::user();
+        
+        if (Gate::allows('admin', $user)) {
+            dd($user);
+        }
     }
     
     public function getUpdateUser(array $data = []) {

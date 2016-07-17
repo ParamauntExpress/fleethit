@@ -1,33 +1,32 @@
 <div class="card">
     <div class="content">
         <div class="meta">
-            2010 Toyota Prius
+            {{ $car->year }} Toyota Prius
         </div>
     </div>
     <div class="image img-shadow">
-        <img class="ui wireframe image" src="img/tp.png">
+        @if(!empty($car->photos()->first()))
+            <img class="ui wireframe image" src="{{ url('/car/photo', [$car->photos()->first()->name]) }}">
+        @endif
     </div>
     <div class="content">
-        <span class="left floated">Rent</span>
-        <span class="right floated"><b>$425 /week</b></span>
+        <span class="left floated">Year</span>
+        <span class="right floated"><b>{{ $car->year }}</b></span>
         <br>
-        <span class="left floated">Rental period</span>
-        <span class="right floated"><b>2 Week(s)</b></span>
+        <span class="left floated">Mileage</span>
+        <span class="right floated"><b>{{ $car->mileage }}</b></span>
         <br>
-        <span class="left floated">Deposit</span>
-        <span class="right floated"><b>$425</b></span>
+        <span class="left floated">VIN</span>
+        <span class="right floated"><b>{{ $car->vin }}</b></span>
         <br>
-        <span class="left floated">Area</span>
-        <span class="right floated"><b>Long Island City</b></span>
+        <span class="left floated">Color</span>
+        <span class="right floated"><b>{{ $car->color }}</b></span>
         <br>
-        <span class="left floated">Exterior color</span>
-        <span class="right floated"><b>Black</b></span>
-        <br>
-        <span class="left floated">Interior color</span>
-        <span class="right floated"><b><span class="text orange">Orange</span></b></span>
+        <span class="left floated">Price</span>
+        <span class="right floated"><b>{{ $car->price }}</b></span>
         <br>
     </div>
     <div class="extra content">
-        <a href="#" class="ui black button">Reserve</a>
+        <a href="{{ url('/detail', [$car->id]) }}" class="ui black button">Detail</a>
     </div>
 </div>

@@ -4,7 +4,8 @@
             <a class="toc item">
                 <i class="sidebar icon"></i> Menu
             </a>
-            <a href="/" class="active item">{{ env('APP_NAME') }}</a>
+            <a href="/" class="item">{{ env('APP_NAME') }}</a>
+            <a href="/dashboard" class="active item">Dashboard</a>
             <div class="right menu">
                 <a href="/logout" class="item">Logout</a>
             </div>

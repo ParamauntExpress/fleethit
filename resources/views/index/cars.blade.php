@@ -6,9 +6,9 @@
     <div class="ui stackable very relaxed center aligned grid container">
         <div class="row">
             <div class="ui link cards centered">
-                @include('index.car')
-                @include('index.car')
-                @include('index.car')
+                @foreach($cars as $car)
+                    @include('index.car')
+                @endforeach
             </div>
         </div>
     </div>
