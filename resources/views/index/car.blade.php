@@ -23,7 +23,7 @@
         <span class="right floated"><b>{{ $car->color }}</b></span>
         <br>
         <span class="left floated">Price</span>
-        <span class="right floated"><b>{{ $car->price }}</b></span>
+        <span class="right floated"><b>$ {{ $car->price }}</b></span>
         <br>
     </div>
     <div class="extra content">

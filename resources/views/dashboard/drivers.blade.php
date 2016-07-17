@@ -1,6 +1,7 @@
 <div class="ui top attached tabular menu">
-    <a class="item active">Drivers</a>
+    <a href="{{ url('/dashboard/cars') }}" class="item">Cars</a>
     <a href="{{ url('/dashboard/users') }}" class="item">Users</a>
+    <a class="item active">Drivers</a>
 </div>
 <div class="ui bottom attached tab segment active">
     <table class="ui celled table">

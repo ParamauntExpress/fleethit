@@ -9,12 +9,12 @@ use App\Scopes\CarGlobalScope;
 
 class Car extends Model
 {
-    protected static function boot()
-    {
-        parent::boot();
+    // protected static function boot()
+    // {
+    //     parent::boot();
 
-        static::addGlobalScope(new CarGlobalScope);
-    }
+    //     static::addGlobalScope(new CarGlobalScope);
+    // }
     
     use SoftDeletes;
     

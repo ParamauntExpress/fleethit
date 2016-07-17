@@ -24,7 +24,12 @@ class DashboardController extends Controller
     
     public function getCars(Request $request) {
         if (\Auth::check()) {
-            $cars = Car::paginate(10);
+            $search = \Request::get('search');
+            if (!empty($search)) {
+                $cars = Car::where('vin', 'like', '%' . $search . '%')->paginate(10);
+            } else {
+                $cars = Car::paginate(10);
+            }
             
             return view('dashboard', ['template' => 'cars', 'cars' => $cars])->with(['info' => ($request) ? $request->info : null]);
         } else {

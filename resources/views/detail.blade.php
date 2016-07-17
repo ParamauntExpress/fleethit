@@ -50,7 +50,7 @@
                                 </tr>
                                 <tr>
                                     <td><b>Price</b></td>
-                                    <td>{{ $car->price }}</td>
+                                    <td>$ {{ $car->price }}</td>
                                 </tr>
                             </tbody>
                             <tfoot>

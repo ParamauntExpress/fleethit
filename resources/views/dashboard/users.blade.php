@@ -1,5 +1,5 @@
 <div class="ui top attached tabular menu">
-    <a href="{{ url('/dashboard/drivers') }}" class="item">Drivers</a>
+    <a href="{{ url('/dashboard/cars') }}" class="item">Cars</a>
     <a class="item active">Users</a>
 </div>
 <div class="ui bottom attached tab segment active">

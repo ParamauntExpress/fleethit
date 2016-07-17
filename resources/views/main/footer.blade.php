@@ -4,9 +4,9 @@
     </div>
     <div class="ui hidden divider"></div>
     <div class="ui stackable center aligned grid container">
-        <div class="three wide column">
+        {{-- <div class="three wide column">
             <a href="#" class="item">How it works</a>
-        </div>
+        </div> --}}
         <div class="three wide column">
             <a href="#" class="item">About us</a>
         </div>

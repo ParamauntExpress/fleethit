@@ -1,5 +1,6 @@
 <div class="ui top attached tabular menu">
     <a class="item active">Cars</a>
+    <a href="{{ url('/dashboard/users') }}" class="item">Users</a>
 </div>
 <div class="ui bottom attached tab segment active">
     <a href="/car/create">
@@ -17,6 +18,12 @@
             </div>
         </div>
         <button class="ui green button" type="submit">Upload</button>
+    </form>
+    <form style="display:inline;" class="ui form" method="GET" action="/dashboard/cars" accept-charset="UTF-8">
+        <div style="display:inline;" class="field">
+            <input style="width:auto;" type="text" name="search" placeholder="Search VIN" />
+        </div>
+        <button class="ui green button" type="submit">Searsh</button>
     </form>
     <table class="ui celled table">
         <thead>
