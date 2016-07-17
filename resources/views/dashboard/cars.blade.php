@@ -21,7 +21,25 @@
     </form>
     <form style="display:inline;" class="ui form" method="GET" action="/dashboard/cars" accept-charset="UTF-8">
         <div style="display:inline;" class="field">
-            <input style="width:auto;" type="text" name="search" placeholder="Search VIN" />
+            <input style="width:auto;" type="text" name="year" placeholder="Search Year"
+            @if(!empty(\Request::get('year')))
+                value="{{ \Request::get('year') }}"
+            @endif
+            />
+        </div>
+        <div style="display:inline;" class="field">
+            <input style="width:auto;" type="text" name="vin" placeholder="Search VIN"
+            @if(!empty(\Request::get('vin')))
+                value="{{ \Request::get('vin') }}"
+            @endif
+            />
+        </div>
+        <div style="display:inline;" class="field">
+            <input style="width:auto;" type="text" name="color" placeholder="Search Color"
+            @if(!empty(\Request::get('color')))
+                value="{{ \Request::get('color') }}"
+            @endif
+            />
         </div>
         <button class="ui green button" type="submit">Searsh</button>
     </form>
