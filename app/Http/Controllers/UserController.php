@@ -13,14 +13,10 @@ use App\User;
 class UserController extends Controller
 {
     public function getEdit(User $user) {
-        //$user = User::find($id);
-        
         return view('user', ['user' => $user]);
     }
     
-    public function postEdit(Request $request) {
-        $user = User::find($request->id);
-        
+    public function postEdit(Request $request, User $user) {
         $user->update(['role' => $request->role]);
         
         $info = ['header' => 'User ' . $user->name, 'message' => 'Success updated!'];

@@ -35,8 +35,8 @@ Route::group(['prefix' => '/dashboard'], function() {
 });
 
 Route::group(['prefix' => '/user'], function() {
-    Route::get('/edit/{id}', ['as' => 'get_user_edit', 'uses' => 'UserController@getEdit']);
-    Route::post('/edit/{id}', ['as' => 'post_user_edit', 'uses' => 'UserController@postEdit']);
+    Route::get('/edit/{user}', ['as' => 'get_user_edit', 'uses' => 'UserController@getEdit']);
+    Route::post('/edit/{user}', ['as' => 'post_user_edit', 'uses' => 'UserController@postEdit']);
 });
 
 Route::group(['prefix' => '/car'], function() {
