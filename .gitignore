@@ -5,6 +5,7 @@
 semantic.json
 /resources/assets/js/libs
 /storage/passport
+/storage/photos
 /public/build
 /public/css
 /public/js

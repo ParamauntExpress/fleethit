@@ -17,6 +17,10 @@
         <input type="text" name="color" placeholder="Color" value="" />
     </div>
     <div class="field">
+        <label>Price</label>
+        <input type="number" name="price" placeholder="Price" value="{{ $car->price }}" />
+    </div>
+    <div class="field">
         <label>Notes</label>
         <textarea type="textarea" name="notes" placeholder="Notes" value=""></textarea>
     </div>
