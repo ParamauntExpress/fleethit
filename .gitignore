@@ -7,8 +7,7 @@ semantic.json
 /storage/passport
 /storage/photos
 /public/build
-/public/css
-/public/js
+/resources/assets
 artisan
 composer.lock
 .env

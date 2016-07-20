@@ -1,0 +1,134 @@
+body,
+html {
+  background: white;
+}
+.following.bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  padding: 2em 0;
+  width: 100%;
+  background-color: rgba(55, 55, 55, 0.5);
+}
+.ui.secondary.inverted.menu,
+.ui.secondary.inverted.pointing.menu {
+  border-color: transparent;
+  border-bottom: 0;
+}
+.masthead .container {
+  min-height: 600px;
+  text-align: center;
+  padding: 15rem 0;
+}
+.masthead .container .introduction {
+  display: none;
+  position: relative;
+  clear: both;
+}
+.masthead .container .introduction h1 {
+  font-size: 1.5rem;
+  line-height: 2;
+}
+.masthead .container .introduction h1 .library {
+  display: block;
+  width: 100%;
+  font-size: 1.75em;
+  font-weight: bold;
+}
+.stripe.segment {
+  padding: 5em 0;
+}
+.relaxed.divided .ui.images img {
+  display: block !important;
+}
+.relaxed.divided .content {
+  padding-left: 1.5em !important;
+}
+.img-shadow {
+  box-shadow: inset 0 0 30px 30px rgba(0, 0, 0, 0.9);
+}
+.text.float-right {
+  float: right !important;
+}
+.text.black {
+  color: black !important;
+}
+.text.orange {
+  color: #f2711c !important;
+}
+.bg.banner {
+  background-image: url('/img/bannerbg.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.bg.pattern {
+  background-image: url('/img/wood.png');
+  background-repeat: repeat;
+}
+.bg.gray {
+  background-color: #efefef !important;
+}
+.secondary.pointing.menu .toc.item {
+  display: none;
+}
+.padding {
+  padding-top: 3.5rem !important;
+  padding-bottom: 3.5rem !important;
+}
+.footer {
+  padding: 2em 0 !important;
+  background-color: #161616 !important;
+}
+.footer h3 {
+  color: white !important;
+}
+.footer a {
+  color: #858585 !important;
+  cursor: pointer;
+}
+.footer a:hover {
+  color: white !important;
+}
+.copyright {
+  padding: 1em 0 !important;
+  background-color: black !important;
+}
+.copyright h4 {
+  color: #858585 !important;
+  font-size: 0.75em;
+  font-weight: bold;
+  text-align: center;
+}
+.basicbg {
+  padding: 12rem 0 20rem !important;
+  background-image: url('/img/main-bg.png') !important;
+  background-position: 0 100% !important;
+  background-repeat: repeat-x !important;
+  min-height: 840px !important;
+}
+.ui.action.input input[type="file"] {
+  display: none;
+}
+.feedback {
+  margin: 1em auto !important;
+}
+@media only screen and (max-width: 700px) {
+  /*
+    .bg {
+        &.banner {
+            background-image: url('/img/bannerbg.jpg');
+            background-position: 50% 50%;
+            background-size: auto 100%;
+        }
+    }
+    */
+  .secondary.pointing.menu .toc.item {
+    display: block;
+  }
+  .secondary.pointing.menu .item {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=custom.css.map */
