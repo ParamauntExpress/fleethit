@@ -54,7 +54,7 @@
                             <tfoot>
                                 <tr>
                                     <td colspan="2">
-                                        {{ $car->notes }}
+                                        {!! $car->notes !!}
                                     </td>
                                 </tr>
                             </tfoot>
