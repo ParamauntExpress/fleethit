@@ -47,6 +47,7 @@ Route::group(['prefix' => '/car'], function() {
     Route::get('/delete/{car}', ['as' => 'get_car_delete', 'uses' => 'CarController@getDelete']);
     Route::post('/parse', ['as' => 'get_car_parse', 'uses' => 'CarController@postParse']);
     Route::get('/photo/{filename}', ['as' => 'get_photo', 'uses' => 'CarController@getPhoto']);
+    Route::get('/photo/thumb/{filename}', ['as' => 'get_photo', 'uses' => 'CarController@getThumbPhoto']);
 });
 
 Route::auth();

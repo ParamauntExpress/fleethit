@@ -16,7 +16,7 @@
                     @foreach($car->photos as $photo)
                         
                             <a href="{{ url('/car/photo', [$photo->name]) }}" target="_blank">
-                                <img src="{{ url('/car/photo', [$photo->name]) }}">
+                                <img src="{{ url('/car/photo/thumb', [$photo->name]) }}">
                             </a>
                         
                     @endforeach

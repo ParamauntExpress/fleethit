@@ -6,7 +6,7 @@
     </div>
     <div class="image img-shadow">
         @if(!empty($car->photos()->first()))
-            <img class="ui wireframe image" src="{{ url('/car/photo', [$car->photos()->first()->name]) }}">
+            <img class="ui wireframe image" src="{{ url('/car/photo/thumb', [$car->photos()->first()->name]) }}">
         @endif
     </div>
     <div class="content">

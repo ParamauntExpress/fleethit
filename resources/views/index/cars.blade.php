@@ -29,7 +29,7 @@
             <div class="field">
                 <select style="width:auto;" class="ui dropdown" name="sort" id="sort">
                     <option value="">Sort by</option>
-                    <option value="nosort">With out Sort</option>
+                    <option value="nosort">Sort from A to Z</option>
                     <option value="plh"
                     @if(\Request::get('sort') == 'plh')
                         selected = "selected"
