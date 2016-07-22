@@ -47,8 +47,12 @@
                                     <td>{{ $car->color }}</td>
                                 </tr>
                                 <tr>
-                                    <td><b>Price</b></td>
-                                    <td>$ {{ $car->price }}</td>
+                                    <td><b>WAS</b></td>
+                                    <td>$ <s>{{ $car->price }}</s></td>
+                                </tr>
+                                <tr>
+                                    <td><b>NOW</b></td>
+                                    <td class="ui red header">$ {{ $car->sale }}</td>
                                 </tr>
                             </tbody>
                             <tfoot>

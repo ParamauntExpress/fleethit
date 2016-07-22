@@ -17,8 +17,12 @@
         <input type="text" name="color" placeholder="Color" value="" />
     </div>
     <div class="field">
-        <label>Price</label>
-        <input type="number" name="price" placeholder="Price" value="{{ $car->price }}" />
+        <label>Was</label>
+        <input type="number" name="price" placeholder="Was" value="{{ $car->price }}" />
+    </div>
+    <div class="field">
+        <label>Now</label>
+        <input type="number" name="sale" placeholder="Now" value="{{ $car->sale }}" />
     </div>
     <div class="field">
         <label>Notes</label>

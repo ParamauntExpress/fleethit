@@ -22,8 +22,11 @@
         <span class="left floated">Color</span>
         <span class="right floated"><b>{{ $car->color }}</b></span>
         <br>
-        <span class="left floated">Price</span>
-        <span class="right floated"><b>$ {{ $car->price }}</b></span>
+        <span class="left floated">WAS</span>
+        <span class="right floated"><b>$ <s>{{ $car->price }}</s></b></span>
+        <br>
+        <span class="left floated">NOW</span>
+        <span class="right floated"><b style="color:red;">$ {{ $car->sale }}</b></span>
         <br>
     </div>
     <div class="extra content">
