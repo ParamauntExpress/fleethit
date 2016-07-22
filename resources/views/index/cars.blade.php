@@ -14,35 +14,44 @@
         <br/>
         <form style="max-width:none;" class="ui form center aligned grid" method="GET" action="/" accept-charset="UTF-8">
             <div class="field">
-                <input style="width:auto;" type="number" name="year" placeholder="Year"
-                @if(!empty(\Request::get('year')))
-                    value="{{ \Request::get('year') }}"
-                @endif
-                />
+                <select style="width:auto;" class="ui dropdown" name="color" id="color">
+                    <option value="">Color</option>
+                    <option value="all">ALL</option>
+                    @foreach($colors as $color)
+                        <option value="{{ $color->color }}"
+                        <?php if(\Request::get('color') == $color->color) {
+                            echo 'selected = "selected"';
+                        } ?>
+                        >{{ $color->color }}</option>
+                    @endforeach
+                </select>
             </div>
             <div class="field">
-                <input style="width:auto;" type="text" name="color" placeholder="Color"
-                @if(!empty(\Request::get('color')))
-                    value="{{ \Request::get('color') }}"
-                @endif
-                />
+                <select style="width:auto;" class="ui dropdown" name="sort" id="sort">
+                    <option value="">Sort by</option>
+                    <option value="nosort">With out Sort</option>
+                    <option value="plh"
+                    @if(\Request::get('sort') == 'plh')
+                        selected = "selected"
+                    @endif
+                    >Price: Low to High</option>
+                    <option value="phl"
+                    @if(\Request::get('sort') == 'phl')
+                        selected = "selected"
+                    @endif
+                    >Price: High to Low</option>
+                    <option value="ylh"
+                    @if(\Request::get('sort') == 'ylh')
+                        selected = "selected"
+                    @endif
+                    >Year: Low to High</option>
+                    <option value="yhl"
+                    @if(\Request::get('sort') == 'yhl')
+                        selected = "selected"
+                    @endif
+                    >Year: High to Low</option>
+                </select>
             </div>
-            <div class="field">
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                <input style="width:auto;" type="number" name="price_from" placeholder="Price from"
-                @if(!empty(\Request::get('price_from')))
-                    value="{{ \Request::get('price_from') }}"
-                @endif
-                />
-            </div>
-            <div class="field">
-                <input style="width:auto;" type="number" name="price_to" placeholder="Price to"
-                @if(!empty(\Request::get('price_to')))
-                    value="{{ \Request::get('price_to') }}"
-                @endif
-                />
-            </div>
-            <br/><br/>
             <div class="field">
                 <button class="ui green button" type="submit">Search</button>
             </div>

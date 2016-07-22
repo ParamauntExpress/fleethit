@@ -41,7 +41,7 @@
             @endif
             />
         </div>
-        <button class="ui green button" type="submit">Searsh</button>
+        <button class="ui green button" type="submit">Search</button>
     </form>
     <table class="ui celled table">
         <thead>
