@@ -14,11 +14,9 @@
                 <div class="item">
                     <div class="ui medium images">
                     @foreach($car->photos as $photo)
-                        
-                            <a href="{{ url('/car/photo', [$photo->name]) }}" target="_blank">
-                                <img src="{{ url('/car/photo/thumb', [$photo->name]) }}">
-                            </a>
-                        
+                        <a href="{{ url('/car/photo', [$photo->name]) }}" target="_blank">
+                            <img src="{{ url('/car/photo/thumb', [$photo->name]) }}">
+                        </a>
                     @endforeach
                     </div>
                     <div class="content">
