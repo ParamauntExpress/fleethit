@@ -1,35 +1,35 @@
 <div class="card">
-    <div class="content">
+    <a class="content" href="{{ url('/detail', [$car->id]) }}">
         <div class="meta">
             {{ $car->year }} Toyota Prius
         </div>
-    </div>
-    <div class="image img-shadow">
+    </a>
+    <a class="image" href="{{ url('/detail', [$car->id]) }}">
         @if(!empty($car->photos()->first()))
             <img class="ui wireframe image" src="{{ url('/car/photo/thumb', [$car->photos()->first()->name]) }}">
         @endif
-    </div>
-    <div class="content">
-        <span class="left floated">Year</span>
-        <span class="right floated"><b>{{ $car->year }}</b></span>
+    </a>
+    <a class="content" href="{{ url('/detail', [$car->id]) }}">
+        <span class="left floated" style="color:black;">Year</span>
+        <span class="right floated" style="color:black;"><b>{{ $car->year }}</b></span>
         <br>
-        <span class="left floated">Mileage</span>
-        <span class="right floated"><b>{{ $car->mileage }}</b></span>
+        <span class="left floated" style="color:black;">Mileage</span>
+        <span class="right floated" style="color:black;"><b>{{ $car->mileage }}</b></span>
         <br>
-        <span class="left floated">VIN</span>
-        <span class="right floated"><b>{{ $car->vin }}</b></span>
+        <span class="left floated" style="color:black;">VIN</span>
+        <span class="right floated" style="color:black;"><b>{{ $car->vin }}</b></span>
         <br>
-        <span class="left floated">Color</span>
-        <span class="right floated"><b>{{ $car->color }}</b></span>
+        <span class="left floated" style="color:black;">Color</span>
+        <span class="right floated" style="color:black;"><b>{{ $car->color }}</b></span>
         <br>
-        <span class="left floated">WAS</span>
-        <span class="right floated"><b>$ <s>{{ $car->price }}</s></b></span>
+        <span class="left floated" style="color:black;">WAS</span>
+        <span class="right floated" style="color:black;"><b>$ <s>{{ $car->price }}</s></b></span>
         <br>
-        <span class="left floated">NOW</span>
-        <span class="right floated"><b style="color:red;">$ {{ $car->sale }}</b></span>
+        <span class="left floated" style="color:black;">NOW</span>
+        <span class="right floated" style="color:red;"><b>$ {{ $car->sale }}</b></span>
         <br>
-    </div>
-    <div class="extra content">
+    </a>
+    {{-- <div class="extra content">
         <a href="{{ url('/detail', [$car->id]) }}" class="ui black button">Detail</a>
-    </div>
+    </div> --}}
 </div>

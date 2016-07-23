@@ -57,6 +57,10 @@ class HomeController extends Controller
         }
     }
     
+    public function getContactUs() {
+        return view('contact');
+    }
+    
     public function getDetail(Car $car) {
         return view('detail', ['car' => $car]);
     }

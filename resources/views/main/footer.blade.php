@@ -11,7 +11,7 @@
             <a href="#" class="item">About us</a>
         </div>
         <div class="three wide column">
-            <a href="#" class="item">Contact us</a>
+            <a href="/contact" class="item">Contact us</a>
         </div>
     </div>
 </div>

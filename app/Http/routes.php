@@ -13,6 +13,7 @@
 
 Route::group(['prefix' => '/'], function() {
     Route::get('/', ['as' => 'get_index', 'uses' => 'HomeController@getIndex']);
+    Route::get('/contact', ['as' => 'get_contact', 'uses' => 'HomeController@getContactUs']);
     Route::get('/detail/{car}', ['as' => 'get_detail', 'uses' => 'HomeController@getDetail']);
 });
 

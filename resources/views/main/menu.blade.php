@@ -8,7 +8,7 @@
             <div class="right menu">
                 {{-- <a href="#" class="item">How it works</a> --}}
                 <a href="#" class="item">About us</a>
-                <a href="#" class="item">Contact us</a>
+                <a href="/contact" class="item">Contact us</a>
             </div>
         </div>
     </div>
