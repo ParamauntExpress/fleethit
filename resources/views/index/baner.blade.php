@@ -7,8 +7,8 @@
                 </span>
                 <div class="ui divider"></div>
                 <span class="tagline">
-                    617-416-1700 Alex<br/>
-                    781-467-9734 Andrey
+                    617-416-1700<br/>
+                    781-467-9734
                 </span>
             </h1>
             {{-- <a class="ui huge inverted basic button rent-modal">Rent a car</a> --}}
