@@ -63,6 +63,9 @@ html {
   background-size: cover;
   text-shadow: black 1px 1px 0, black -1px -1px 0, black -1px 1px 0, black 1px -1px 0;
 }
+.bg.banner a {
+  color: white !important;
+}
 .bg.pattern {
   background-image: url('/img/wood.png');
   background-repeat: repeat;
