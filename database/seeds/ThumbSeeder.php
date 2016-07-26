@@ -11,11 +11,13 @@ class ThumbSeeder extends Seeder
         $cars = Car::get();
         
         foreach ($cars as $car) {
-            $photo = $car->photos()->first();
-            if (!empty($photo)) {
-                \Image::make(storage_path('photos/'  . $photo->name))->resize(300, null, function($constraint) {
-                    $constraint->aspectRatio();
-                })->save(storage_path('photos/thumbs/' . $photo->name));
+            $photos = $car->photos;
+            foreach ($photos as $photo) {
+                if (!empty($photo)) {
+                    \Image::make(storage_path('photos/'  . $photo->name))->resize(300, null, function($constraint) {
+                        $constraint->aspectRatio();
+                    })->save(storage_path('photos/thumbs/' . $photo->name));
+                }
             }
         }
     }
