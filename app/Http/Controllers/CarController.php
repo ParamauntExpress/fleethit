@@ -69,7 +69,7 @@ class CarController extends Controller
     }
     
     public function getPhoto($filename) {
-        return \Image::make(storage_path('photos/'  . $filename))->response( 'jpg' );
+        return \Image::make(storage_path('photos/'  . $filename))->response('jpg');
         
         /*
         $path = storage_path('photos/'  . $filename);
@@ -87,9 +87,7 @@ class CarController extends Controller
     }
     
     public function getThumbPhoto($filename) {
-        return \Image::make(storage_path('photos/'  . $filename))->resize(300, null, function($constraint) {
-            $constraint->aspectRatio();
-        })->response( 'jpg' );
+        return \Image::make(storage_path('photos/thumbs/'  . $filename))->response('jpg');
     }
     
     public function postParse(Request $request) {
