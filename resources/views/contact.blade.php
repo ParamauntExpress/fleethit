@@ -11,14 +11,9 @@
             <h1 class="ui header centered">Contact us</h1>
             <div class="ui segment">
                 <h3 class="ui header">
-                    Do you have any questions? Please call us.
-                    <br/><br/>
-                    Please call:
+                    +1-617-416-1700<br/>
+                    +1-781-467-9734
                 </h3>
-                <h4>
-                    +1-617-416-1700 Alex<br/>
-                    +1-781-467-9734 Andrey
-                </h4>
             </div>
         </div>
     </div>

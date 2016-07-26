@@ -17,9 +17,9 @@ html {
   border-bottom: 0;
 }
 .masthead .container {
-  min-height: 600px;
+  min-height: 400px;
   text-align: center;
-  padding: 15rem 0;
+  padding: 12rem 0;
 }
 .masthead .container .introduction {
   display: none;
@@ -114,15 +114,6 @@ html {
   margin: 1em auto !important;
 }
 @media only screen and (max-width: 700px) {
-  /*
-    .bg {
-        &.banner {
-            background-image: url('/img/bannerbg.jpg');
-            background-position: 50% 50%;
-            background-size: auto 100%;
-        }
-    }
-    */
   .secondary.pointing.menu .toc.item {
     display: block;
   }

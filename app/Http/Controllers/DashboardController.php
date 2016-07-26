@@ -16,7 +16,11 @@ class DashboardController extends Controller
 {
     public function getIndex() {
         if (\Auth::check()) {
-            return redirect()->intended('/dashboard/cars');
+            if (Gate::allows('admin', \Auth::user()) || Gate::allows('manager', \Auth::user())) {
+                return redirect()->intended('/dashboard/cars');
+            } else {
+                return redirect()->intended('/');
+            }
         } else {
             return redirect()->intended('/');
         }

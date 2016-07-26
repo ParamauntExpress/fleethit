@@ -20,11 +20,6 @@
                     @endforeach
                     </div>
                     <div class="content">
-                        <!--<div class="header">Toyota Prius</div>-->
-                        <!--<div class="meta">-->
-                        <!--    <b><a>Year</a></b>-->
-                        <!--    <a>{{ $car->year }}</a>-->
-                        <!--</div>-->
                         <table class="ui very basic celled table">
                             <thead>
                                 <tr><th colspan="2">Toyota Prius</th></tr>
@@ -46,6 +41,16 @@
                                     <td><b>Color</b></td>
                                     <td>{{ $car->color }}</td>
                                 </tr>
+                                
+                                <tr>
+                                    <td><b>Trim</b></td>
+                                    <td>{{ $car->trim }}</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Options</b></td>
+                                    <td>{{ $car->options }}</td>
+                                </tr>
+                                
                                 <tr>
                                     <td><b>WAS</b></td>
                                     <td>$ <s>{{ $car->price }}</s></td>

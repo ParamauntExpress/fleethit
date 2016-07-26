@@ -18,7 +18,7 @@ class Car extends Model
     
     use SoftDeletes;
     
-    protected $fillable = ['year', 'mileage', 'vin', 'color', 'notes', 'price', 'sale'];
+    protected $fillable = ['year', 'mileage', 'vin', 'color', 'notes', 'price', 'sale', 'trim', 'options'];
     
     protected $dates = ['deleted_at'];
     

@@ -8,9 +8,6 @@
             <a href="#" class="item">How it works</a>
         </div> --}}
         <div class="three wide column">
-            <a href="#" class="item">About us</a>
-        </div>
-        <div class="three wide column">
             <a href="/contact" class="item">Contact us</a>
         </div>
     </div>

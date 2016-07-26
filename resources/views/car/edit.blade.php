@@ -18,6 +18,14 @@
         <input type="text" name="color" placeholder="Color" value="{{ $car->color }}" />
     </div>
     <div class="field">
+        <label>Trim</label>
+        <input type="text" name="trim" placeholder="Trim" value="{{ $car->trim }}" />
+    </div>
+    <div class="field">
+        <label>Options</label>
+        <input type="text" name="options" placeholder="Options" value="{{ $car->options }}" />
+    </div>
+    <div class="field">
         <label>Was</label>
         <input type="number" name="price" placeholder="Was" value="{{ $car->price }}" />
     </div>
