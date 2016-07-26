@@ -7,8 +7,8 @@
                 </span>
                 <div class="ui divider"></div>
                 <span class="library">
-                    <a href="tel:+1-617-416-1700">617-416-1700</a><br/>
-                    <a href="tel:+1-781-467-9734">781-467-9734</a>
+                    <a href="tel:+1-617-416-1700">+1(617)-416-1700</a><br/>
+                    <a href="tel:+1-781-467-9734">+1(781)-467-9734</a>
                 </span>
             </h1>
             {{-- <a class="ui huge inverted basic button rent-modal">Rent a car</a> --}}
